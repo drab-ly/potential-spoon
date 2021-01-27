@@ -1,4 +1,9 @@
 import folium
+import datetime
+
+with open('lastupdate.txt', 'w') as lufile:
+    lufile.write(str(datetime.datetime.now()))
+lufile.close()
 
 with open('data.txt') as file:
     gpsData = str(file.read()).split('\n')
